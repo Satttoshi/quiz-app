@@ -9,7 +9,7 @@
   </head>
   <body>
     <!-- Header Section -->
-    <header class="header">
+    <header id="top" class="header">
       <h1>Quiz App</h1>
     </header>
 
@@ -37,14 +37,57 @@
         <p class="tag">#css</p>
       </span>
     </div>
+    <!-- Question 2 -->
+    <div class="container">
+      <img
+        class="questionbookmark"
+        src="./assets/bookmark.png"
+        alt="bookmark"
+      />
+      <p class="question01">
+        How many holes in a polo? I did count it, and it's definitely not four!
+      </p>
+      <button class="answer">Show Answer</button>
+      <span class="tags_container">
+        <p class="tag">#html</p>
+        <p class="tag">#flexbox</p>
+        <p class="tag">#css</p>
+      </span>
+    </div>
+    <!-- Question 3 -->
+    <div class="container">
+      <img
+        class="questionbookmark"
+        src="./assets/bookmark.png"
+        alt="bookmark"
+      />
+      <p class="question01">
+        How many holes in a polo? I did count it, and it's definitely not four!
+      </p>
+      <button class="answer">Show Answer</button>
+      <span class="tags_container">
+        <p class="tag">#html</p>
+        <p class="tag">#flexbox</p>
+        <p class="tag">#css</p>
+      </span>
+    </div>
 
     <!-- Footer Section -->
     <footer>
-      <nav>
-        <img src="./assets/home.png" alt="home" />
-        <img src="./assets/bookmark.png" alt="bookmark" />
-        <img src="./assets/profile.png" alt="profile" />
+      <nav class="footer_container">
+        <a href="#top">
+          <img class="footer_image" src="./assets/home.png" alt="home"
+        /></a>
+        <a href="./pages/bookmark">
+          <img class="footer_image" src="./assets/bookmark.png" alt="bookmark"
+        /></a>
+        <a href="./pages/profile">
+          <img class="footer_image" src="./assets/profile.png" alt="profile"
+        /></a>
       </nav>
     </footer>
+
+    <!-- Placeholder, that Main element doesn't dissapear behind footer -->
+    <div class="site-end"></div>
   </body>
 </html>

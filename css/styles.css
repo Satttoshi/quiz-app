@@ -8,10 +8,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: aliceblue;
 }
 
 .header {
   display: flex;
+  background-color: beige;
   border: solid 2px;
   justify-content: center;
   align-items: center;
@@ -30,9 +32,11 @@ h1 {
   position: relative;
   flex-direction: column;
   border: solid 2px;
+  background-color: bisque;
   height: 300px;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 30px;
 }
 
 .questionbookmark {
@@ -68,4 +72,26 @@ h1 {
   border: solid 1px;
   padding: 4px 8px 4px 12px;
   background-color: lightsteelblue;
+}
+
+.footer_container {
+  background-color: beige;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: solid 2px;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+.footer_image {
+  height: 64px;
+  width: 64px;
+}
+
+.site-end {
+  margin: 30px;
 }
