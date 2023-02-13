@@ -78,6 +78,7 @@ h1 {
 
 .tag {
   border: solid 1px;
+  margin: 0;
   padding: 4px 8px 4px 12px;
   background-color: lightsteelblue;
 }
