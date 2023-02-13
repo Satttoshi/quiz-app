@@ -40,9 +40,9 @@ h1 {
 }
 
 .questionbookmark {
-  align-self: flex-end;
   position: absolute;
   top: -20px;
+  right: 20px;
   margin: 0;
   width: 64px;
   height: 64px;
