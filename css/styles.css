@@ -2,7 +2,9 @@
   box-sizing: border-box;
 }
 
-body {
+main {
+  margin-top: 80px;
+  margin-bottom: 60px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   display: flex;
@@ -41,7 +43,7 @@ h1 {
   flex-direction: column;
   border: solid 2px;
   background-color: bisque;
-  height: 300px;
+  height: 350px;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 30px;
@@ -73,7 +75,7 @@ h1 {
   align-self: flex-start;
   gap: 10px;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 
 .tag {
@@ -98,9 +100,34 @@ h1 {
   gap: 5%;
 }
 
-.footer_image {
-  height: 64px;
-  width: 64px;
+.footer_home {
+  fill: black;
+  transition: fill 0.5s ease-in-out;
+}
+
+.footer_bookmark {
+  fill: black;
+  transition: fill 0.5s ease-in-out;
+}
+
+.footer_profile {
+  fill: black;
+  transition: fill 0.5s ease-in-out;
+}
+
+.footer_home:hover {
+  fill: transparent;
+  stroke: black;
+}
+
+.footer_bookmark:hover {
+  fill: transparent;
+  stroke: black;
+}
+
+.footer_profile:hover {
+  fill: transparent;
+  stroke: black;
 }
 
 .site-start {
