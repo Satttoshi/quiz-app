@@ -43,7 +43,7 @@ h1 {
   flex-direction: column;
   border: solid 2px;
   background-color: bisque;
-  height: 350px;
+  height: 300px;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 30px;
@@ -58,14 +58,24 @@ h1 {
   height: 64px;
 }
 
-.question01 {
-  margin-top: 50px;
+.question {
+  margin-top: 20px;
   padding: 20px;
   text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .answer {
   height: 30px;
+}
+
+.answer:hover {
+  background-color: yellow;
+}
+
+.answer:focus {
+  background-color: greenyellow;
 }
 
 .tags_container {
