@@ -1,0 +1,21 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  display: flex;
+  background-color: var(--color2);
+  border: solid 2px;
+  border-left: none;
+  border-right: none;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
