@@ -1,4 +1,4 @@
-.container {
+.card {
   align-self: center;
   width: 80%;
   display: flex;
@@ -12,16 +12,7 @@
   margin-bottom: 30px;
 }
 
-.questionbookmark {
-  position: absolute;
-  top: -20px;
-  right: 20px;
-  margin: 0;
-  width: 64px;
-  height: 64px;
-}
-
-.question {
+.card__question {
   margin-top: 20px;
   padding: 20px;
   text-align: center;
@@ -29,7 +20,7 @@
   padding-bottom: 0;
 }
 
-.tags_container {
+.card__tags {
   margin: 0;
   margin-left: 2%;
   display: flex;
@@ -44,4 +35,13 @@
   margin: 0;
   padding: 4px 8px 4px 12px;
   background-color: var(--color4);
+}
+
+.card--bookmark {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  margin: 0;
+  width: 64px;
+  height: 64px;
 }

@@ -1,5 +1,11 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+* {
+  margin: 0;
 }
 
 :root {
@@ -7,6 +13,10 @@
   --color2: beige;
   --color3: bisque;
   --color4: lightsteelblue;
+}
+
+body {
+  background-color: var(--color1);
 }
 
 main {
@@ -17,5 +27,4 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--color1);
 }
