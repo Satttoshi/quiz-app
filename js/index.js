@@ -1,29 +1,7 @@
 console.clear();
 
-// Bookmark Toggler
-const bookmark = document.querySelector(`[data-js="bookmark"]`);
-
-bookmark.addEventListener("click", (event) => {
-  event.target.classList.toggle("card__bookmark--select");
-});
-
-// Answer Button Toggler
-const answerButton = document.querySelector(`[data-js="answer"]`);
-
-answerButton.addEventListener("click", (event) => {
-  // console.dir(event.target);
-  const hiddenLabel = "Show Answer";
-  const answer = "How should I know? LOL";
-
-  if (event.target.dataset.showanswer === "false") {
-    event.target.setAttribute("data-showanswer", "true");
-    event.target.textContent = answer;
-  } else {
-    event.target.setAttribute("data-showanswer", "false");
-    event.target.textContent = hiddenLabel;
-  }
-});
-
+// Load necessary DOM
+const main = document.querySelector("main");
 const form = document.querySelector(`[data-js="form"]`);
 
 // Submit, create element, instanciate button functions, append elements
@@ -31,16 +9,15 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
-
   addQuestion(data);
   form.reset();
   form["1"].focus();
 });
 
-const main = document.querySelector("main");
-
+// Function to add Content and Functionality to appended cards
 function addQuestion(data) {
-  console.log(data);
+  // console.log(data);
+  // console.log(newCard.children["0"]);
   const newCard = document.createElement("section");
   newCard.classList.add("card");
 
@@ -77,6 +54,9 @@ function addQuestion(data) {
     </span>
     `;
 
+  // Add Event Listener to generated Bookmark Symbol
+  newCard.children["0"].addEventListener("click", toggleBookmark);
+
   // Add Event Listener to generated Button Element
   newCard.children["2"].addEventListener("click", (event) => {
     // !!! CALLBACK FUNCTION IN CALLBACK FUNCTION LOLOLOL
@@ -86,7 +66,7 @@ function addQuestion(data) {
   main.append(newCard);
 }
 
-// Function for Event Listener
+// Function for Event Listener Show Answer Button
 function showAnswer(event, data) {
   const hiddenLabel = "Show Answer";
   const answer = data.answer;
@@ -100,4 +80,7 @@ function showAnswer(event, data) {
   }
 }
 
-function toggleBookmark(event) {}
+// Function to Bookmark color, Todo set dynamic attribut for true false like with answer button
+function toggleBookmark(event) {
+  event.target.classList.toggle("card__bookmark--select");
+}
