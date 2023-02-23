@@ -37,11 +37,18 @@
   background-color: var(--color4);
 }
 
-.card--bookmark {
+.card__bookmark {
   position: absolute;
+  cursor: pointer;
+  fill: black;
+  stroke: black;
   top: -20px;
   right: 20px;
   margin: 0;
   width: 64px;
   height: 64px;
+}
+
+.card__bookmark--select {
+  fill: white;
 }
