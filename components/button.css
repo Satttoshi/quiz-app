@@ -4,6 +4,7 @@
 
 .answer:hover {
   background-color: yellow;
+  cursor: pointer;
 }
 
 .answer:focus {
