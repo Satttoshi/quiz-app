@@ -64,6 +64,7 @@ function addQuestion(data) {
   });
 
   main.append(newCard);
+  console.dir(newCard);
 }
 
 // Function for Event Listener Show Answer Button
@@ -85,6 +86,7 @@ function toggleBookmark(event) {
   event.target.classList.toggle("card__bookmark--select");
 }
 
+// Characters
 const inputQ = document.querySelector(`[data-js="inputq"]`);
 const inputA = document.querySelector(`[data-js="inputa"]`);
 
