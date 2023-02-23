@@ -21,10 +21,33 @@
     - categories as tags (#bla #bla #bla)
     - answer shows on click 
     -->
-    <!-- Question 1 -->
-    <main>
-      <section></section>
 
+    <main>
+      <section>
+        <form class="form" data-js="form">
+          <fieldset class="form__field">
+            <legend>Add Question</legend>
+            <label for="question">Enter question:</label>
+            <input
+              class="form--inputquestion"
+              type="text"
+              name="question"
+              id="question"
+            />
+            <label for="answer">Enter answer:</label>
+            <input
+              class="form--inputanswer"
+              type="text"
+              name="answer"
+              id="answer"
+            />
+            <button class="form--submitbutton" type="submit">
+              Add Question
+            </button>
+          </fieldset>
+        </form>
+      </section>
+      <!-- Question 1 -->
       <section class="card">
         <svg
           data-js="bookmark"

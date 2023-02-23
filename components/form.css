@@ -1,0 +1,25 @@
+.form {
+  align-self: center;
+  width: 80%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border: solid 2px;
+  background-color: var(--color3);
+  height: 200px;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.form__field {
+}
+
+.form--inputquestion {
+}
+
+.form--inputanswer {
+}
+
+.form--submitbutton {
+}
