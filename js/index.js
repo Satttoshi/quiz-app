@@ -26,6 +26,7 @@ answerButton.addEventListener("click", (event) => {
 
 const form = document.querySelector(`[data-js="form"]`);
 
+// Submit, create element, instanciate button functions, append elements
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
@@ -61,7 +62,6 @@ function addQuestion(data) {
     <p class="card__question">
     ${data.question}
     </p>
-    <!-- Button component start -->
     <button
     type="button"
     class="answer"
@@ -70,7 +70,6 @@ function addQuestion(data) {
     >
     Show Answer
     </button>
-    <!-- Button component end -->
     <span class="card__tags">
     <p class="tag">#html</p>
     <p class="tag">#flexbox</p>
@@ -78,44 +77,27 @@ function addQuestion(data) {
     </span>
     `;
 
+  // Add Event Listener to generated Button Element
+  newCard.children["2"].addEventListener("click", (event) => {
+    // !!! CALLBACK FUNCTION IN CALLBACK FUNCTION LOLOLOL
+    showAnswer(event, data);
+  });
+
   main.append(newCard);
 }
 
-/* 
-<section class="card">
-<svg
-  data-js="bookmark"
-  class="card__bookmark"
-  aria-label="bookmarked"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  width="64px"
-  heigth="64px"
->
-  <path
-    d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"
-  />
-</svg>
+// Function for Event Listener
+function showAnswer(event, data) {
+  const hiddenLabel = "Show Answer";
+  const answer = data.answer;
 
-<p class="card__question">
-  How many holes in a polo? I did count it, and it's definitely not
-  four!
-</p>
-<!-- Button component start -->
-<button
-  type="button"
-  class="answer"
-  data-showanswer="false"
-  data-js="answer"
->
-  Show Answer
-</button>
-<!-- Button component end -->
-<span class="card__tags">
-  <p class="tag">#html</p>
-  <p class="tag">#flexbox</p>
-  <p class="tag">#css</p>
-</span>
-</section> */
+  if (event.target.dataset.showanswer === "false") {
+    event.target.setAttribute("data-showanswer", "true");
+    event.target.textContent = answer;
+  } else {
+    event.target.setAttribute("data-showanswer", "false");
+    event.target.textContent = hiddenLabel;
+  }
+}
 
-// console.log(form["1"]);
+function toggleBookmark(event) {}
