@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:root {
+  --color1: aliceblue;
+  --color2: beige;
+  --color3: bisque;
+  --color4: lightsteelblue;
+}
+
+body {
+  background-color: var(--color1);
+}
+
+main {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
