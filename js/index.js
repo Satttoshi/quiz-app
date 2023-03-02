@@ -1,4 +1,5 @@
 console.clear();
+console.log("hi");
 
 // Load necessary DOM
 const main = document.querySelector("main");
