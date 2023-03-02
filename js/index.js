@@ -64,6 +64,7 @@ function addQuestion(data) {
   });
 
   main.append(newCard);
+  console.dir(newCard);
 }
 
 // Function for Event Listener Show Answer Button
@@ -84,3 +85,37 @@ function showAnswer(event, data) {
 function toggleBookmark(event) {
   event.target.classList.toggle("card__bookmark--select");
 }
+
+// Characters
+const inputQ = document.querySelector(`[data-js="inputq"]`);
+const inputA = document.querySelector(`[data-js="inputa"]`);
+
+const amountLeftQ = document.querySelector(`[data-js="amount-left-q"]`);
+const amountLeftA = document.querySelector(`[data-js="amount-left-a"]`);
+
+const maxLengthQ = inputQ.getAttribute("maxlength");
+const maxLengthA = inputA.getAttribute("maxlength");
+
+// For Q
+const updateAmountLeftQ = (value) => {
+  amountLeftQ.innerText = value;
+};
+
+updateAmountLeftQ(maxLengthQ + " characters left");
+
+inputQ.addEventListener("input", () => {
+  const value = maxLengthQ - inputQ.value.length;
+  updateAmountLeftQ(value + " characters left");
+});
+
+// For A
+const updateAmountLeftA = (value) => {
+  amountLeftA.innerText = value;
+};
+
+updateAmountLeftA(maxLengthA + " characters left");
+
+inputA.addEventListener("input", () => {
+  const value = maxLengthA - inputA.value.length;
+  updateAmountLeftA(value + " characters left");
+});
