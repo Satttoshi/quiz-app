@@ -120,3 +120,9 @@ inputA.addEventListener("input", () => {
   const value = maxLengthA - inputA.value.length;
   updateAmountLeftA(value + " characters left");
 });
+
+function test() {
+  console.log("lolXD");
+}
+
+test();
