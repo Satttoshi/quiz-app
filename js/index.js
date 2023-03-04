@@ -126,3 +126,9 @@ function test() {
 }
 
 test();
+
+function lolXd() {
+  console.log("XDD");
+}
+
+lolXd();
