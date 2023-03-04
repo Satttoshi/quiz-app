@@ -1,6 +1,2 @@
-Hi 7776 
-87h84tertert
-asdasd
-LOLXD
-asd
-test
+This is my Quiz-App
+created for edu purposes.
